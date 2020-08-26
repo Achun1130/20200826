@@ -1,0 +1,178 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+/* ================ css reset end ================= */
+
+body {
+    font-family: 'Microsoft JhengHei';
+    background: #11212e;
+}
+
+.wrap {
+    overflow: hidden;
+}
+
+a {
+    display: block;
+    text-decoration: none;
+}
+
+.header {
+    position: relative;
+}
+
+.container , .content{
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+.flex {
+    display: flex;
+}
+
+.header .container {
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #6ac961;
+}
+
+.header h1 a {
+    width: 40px;
+    height: 40px;
+    background: url('../img/chrome.svg');
+    text-indent: 101%;
+    overflow: hidden;
+    white-space: nowrap;
+    margin: 10px 15px;
+}
+
+.nav li a {
+    padding: 22px 15px;
+    color: #6ac961;
+}
+
+.nav li a:hover {
+    background: #6ac961;
+    color: #fff;
+}
+
+.header .btn {
+    display: none;
+}
+
+.header .btn i:last-child {
+    display: none;
+}
+
+.content p {
+    color: #fff;
+    padding: 15px;
+}
+
+@media (max-width:767px) {
+    .header {
+        position: fixed;
+        right: 0;
+        left: 0;
+        background: #11212e;
+    }
+    .header .container {
+        flex-direction: column;
+    }
+    .header .btn {
+        display: block;
+        font-size: 36px;
+        position: fixed;
+        top: 12px;
+        right: 5%;
+        color: #6ac961;
+    }
+    .header .nav {
+        /* 以下是選單從上出現 */
+        max-height: 0;
+        overflow: hidden;
+        display: block;
+        position: absolute;
+        top: 61px;
+        left: 0;
+        right: 0;
+        transition: all .7s ease-in-out;
+        background: #11212e;
+        /* 以下是選單從右側出現 */
+        /* transform: translate(767px); */
+    }
+    .nav li a {
+        border-bottom: 1px dashed #6ac961;
+        text-align: center;
+    }
+    .active .nav {
+        /* 以下是選單從上出現 */
+        max-height: 427px;
+        /* 以下是選單從右側出現 */
+        /* transform: translate(0px); */
+    }
+    .active .btn i:first-child {
+        display: none;
+    }
+    .active .btn i:last-child {
+        display: block;
+    }
+    .content {
+        padding-top: 61px;
+    }
+}
