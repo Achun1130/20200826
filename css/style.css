@@ -142,6 +142,7 @@ a {
         top: 12px;
         right: 5%;
         color: #6ac961;
+        z-index: 10;
     }
     .header .nav {
         /* 以下是選單從上出現 */
@@ -156,7 +157,15 @@ a {
         background: #11212e;
         /* 以下是選單從右側出現 */
         /* transform: translate(767px); */
+        height: 100vh;
+        overflow-y: auto;
     }
+    /* .menu {
+        position: absolute;
+        top: 61px;
+        left: 0;
+        right: 0;
+    } */
     .nav li a {
         border-bottom: 1px dashed #6ac961;
         text-align: center;
