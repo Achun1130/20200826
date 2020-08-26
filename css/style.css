@@ -160,7 +160,6 @@ a {
     .nav li a {
         border-bottom: 1px dashed #6ac961;
         text-align: center;
-        padding: 10px;
     }
     .active .nav {
         /* 以下是選單從上出現 */
